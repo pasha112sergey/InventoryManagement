@@ -1,0 +1,10 @@
+{% extends '../layout.html' %}
+{% load static %}
+{% block content %}
+<div class="content-section text-center">
+    <p>You have successfully logged out.</p>
+    <form method="get" action="{% url 'login' %}">
+        <button type="submit" class="btn btn-primary">Login Again</button>
+    </form>
+</div>
+{% endblock %}
