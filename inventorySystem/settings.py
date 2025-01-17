@@ -139,3 +139,7 @@ LOGIN_URL = 'login'
 LOGOUT_REDIRECT_URL = '/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://django-inventory-sys.herokuapp.com'
+]
