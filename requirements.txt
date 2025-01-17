@@ -22,6 +22,7 @@ cycler==0.12.1
 debugpy==1.8.11
 decorator==5.1.1
 defusedxml==0.7.1
+dj-database-url==2.3.0
 Django==5.1.4
 django-crispy-forms==2.3
 et_xmlfile==2.0.0
