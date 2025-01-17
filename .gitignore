@@ -11,7 +11,7 @@ venv/
 *.sqlite3
 
 # Ignore static and media files (optional)
-staticfiles/
+# staticfiles/
 media/
 
 # Ignore Django migrations

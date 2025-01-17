@@ -25,4 +25,6 @@ urlpatterns = [
     path('inventory/', include('inventory.urls')),
     path("", auth_views.LoginView.as_view(template_name = "inventory_system/login.html"), name = "login"),
     path('logout/', views.custom_logout_view, name='logout'),
+    path('register/', views.register, name='register'),
+
 ]
