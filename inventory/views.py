@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import logout
 from .models import Inventory
 from django.contrib.auth.decorators import login_required
-from .forms import AddInventoryForm, UpdateInventoryForm
+from .forms import AddInventoryForm, UpdateInventoryForm, RegisterForm
 
 
 @login_required
