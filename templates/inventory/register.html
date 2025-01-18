@@ -6,8 +6,23 @@
     <h1>Register</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
+        <div class="form-group">
+            <label for="id_username">Username</label>
+            {{ form.username|crispy }}
+        </div>
+        <div class="form-group">
+            <label for="id_email">Email</label>
+            {{ form.email|crispy }}
+        </div>
+        <div class="form-group">
+            <label for="id_password1">Password</label>
+            {{ form.password1|crispy }}
+        </div>
+        <div class="form-group">
+            <label for="id_password2">Confirm Password</label>
+            {{ form.password2|crispy }}
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
     </form>
 </div>
 {% endblock %}
