@@ -152,5 +152,5 @@ LOGOUT_REDIRECT_URL = '/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://django-inventory-sys.herokuapp.com'
+    'https://django-inventory-sys-2b0592905f9a.herokuapp.com',
 ]
