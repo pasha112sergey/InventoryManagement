@@ -8,7 +8,7 @@ from .forms import AddInventoryForm, UpdateInventoryForm, RegisterForm
 
 @login_required
 def inventory_list(request):
-    inventories = Inventory.objects.all()
+    inventories = Inventory.objects.filter(user=request.user)
     context = {
         "title" : "Inventory List",
         "inventories" : inventories
@@ -34,6 +34,7 @@ def add_product(request):
         add_form = AddInventoryForm(data=request.POST)
         if add_form.is_valid():
             new_inventory = add_form.save(commit=False)
+            new_inventory.user = request.user
             new_inventory.sales = float(add_form.data['cost_per_item']) * float(add_form.data['quantity_sold'])
             new_inventory.save()
             return redirect('/inventory/')
@@ -44,6 +45,8 @@ def add_product(request):
 @login_required
 def delete_inventory(request, pk):
     inventory = get_object_or_404(Inventory, pk=pk)
+    if inventory.user != request.user:
+        return HttpResponseForbidden("You are not allowed to delete this item.")
     inventory.delete()
     return redirect('/inventory/')
 
