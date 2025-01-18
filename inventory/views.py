@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth import logout
+from django.contrib.auth import logout, login
 from .models import Inventory
 from django.contrib.auth.decorators import login_required
 from .forms import AddInventoryForm, UpdateInventoryForm, RegisterForm
+
 
 
 @login_required
