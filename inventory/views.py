@@ -74,4 +74,4 @@ def register(request):
             return redirect('inventory_list')  # Redirect to a relevant page
     else:
         form = RegisterForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'inventory/register.html', {'form': form})
