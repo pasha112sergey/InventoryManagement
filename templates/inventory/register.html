@@ -9,7 +9,7 @@
              <fieldset>
                 {% csrf_token %}
                 <div class="form-group text-center">
-                    {{ form.company_name }}
+                    {{ form.username | as_crispy_field}}
                 </div>
                 <div class="form-group text-center">
                     {{ form.email| as_crispy_field  }}
