@@ -8,19 +8,15 @@
         <form method="post" class="content-section text-center">
              <fieldset>
                 {% csrf_token %}
-                <label for="id_username" class="text-center">Username</label>
                 <div class="form-group text-center">
                     {{ form.username|as_crispy_field  }}
                 </div>
-                <label for="id_email">Email</label>
                 <div class="form-group text-center">
                     {{ form.email| as_crispy_field  }}
                 </div>
-                <label for="id_password1" class="text-center">Password</label>
                 <div class="form-group text-center">
                     {{ form.password1| as_crispy_field  }}
                 </div>
-                <label for="id_password2">Confirm Password</label>
                 <div class="form-group text-center">
                     {{ form.password2| as_crispy_field  }}
                 </div>
